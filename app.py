@@ -10,6 +10,10 @@ class GalileanMoons:
 
 @app.route("/cond") 
 def hello_world():
-    company="Microsoft"
+    user_os = {
+        "bhavik":"Windows",
+        "anuj":"MacOS",
+        "aman":"Linux"
+    }
 
-    return render_template("conditionals_basics.html",company=company)
+    return render_template("loops_and_conditionals.html",user_os=user_os)
