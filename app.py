@@ -1,10 +1,28 @@
 from flask import Flask, render_template
 app = Flask(__name__)
 
-@app.route("/")
+@app.route("/") 
 def hello_world():
-    return render_template("example.html")
+    color = "brown"
+    animal_one = "fox"
+    animal_two = "dog"
 
-@app.route("/html")
-def htmol():
-    return render_template("jinja.html",name="Bhavik", template_name="Jinja2")
+    orange_amount = 10
+    apple_amount = 20
+    donate_amount = 15
+
+    first_name = "Captain"
+    last_name = "Marvel"
+
+    keys =  {
+            "color" : color,
+            "animal_one" : animal_one,
+            "animal_two" : animal_two,
+            "orange_amount" : orange_amount,
+            "apple_amount" : apple_amount,
+            "donate_amount" : donate_amount,
+            "first_name" : first_name,
+            "last_name" : last_name
+    }
+
+    return render_template("expressions.html",**keys)
