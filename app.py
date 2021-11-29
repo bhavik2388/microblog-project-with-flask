@@ -8,19 +8,8 @@ class GalileanMoons:
         self.third = third
         self.fourth = fourth
 
-@app.route("/datast") 
+@app.route("/cond") 
 def hello_world():
-    movies = [
-        "Avenger",
-        "Spiderman",
-        "Ironman"
-    ]
-    car = {
-        "brand":"tesla",
-        "model":"roadster",
-        "year": "2020"
-    }
+    company="Microsoft"
 
-    moons = GalileanMoons("Io","Europa","Ganymede","Callisto")
-
-    return render_template("data_structures.html",movies=movies,car=car,moons=moons)
+    return render_template("conditionals_basics.html",company=company)
