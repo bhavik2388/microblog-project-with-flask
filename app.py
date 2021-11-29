@@ -7,4 +7,4 @@ def hello_world():
 
 @app.route("/html")
 def htmol():
-    return render_template("ex 2.html")
+    return render_template("jinja.html",name="Bhavik", template_name="Jinja2")
